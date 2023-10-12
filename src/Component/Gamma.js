@@ -3,7 +3,7 @@ import React from "react";
 import { findMean, findMode, findMedian } from "../Utils/utils";
 
 const Gamma = (data) => {
-  const { wineData } = data;
+  const { wineData } = data; //Destructured winedata from prop data
 
   const calculateData = (data) => {
     return {
@@ -13,6 +13,7 @@ const Gamma = (data) => {
     };
   };
 
+  //Filtered data where class of alcohol is 1 and calculated gamma in map and returned gamma values for all
   const class1 = wineData
     .filter((el) => el.Alcohol === 1)
     .map((el) => {
@@ -20,6 +21,7 @@ const Gamma = (data) => {
       return gamma;
     });
 
+  //Filtered data where class of alcohol is 2 and calculated gamma in map and returned gamma values for all
   const class2 = wineData
     .filter((el) => el.Alcohol === 2)
     .map((el) => {
@@ -27,6 +29,7 @@ const Gamma = (data) => {
       return gamma;
     });
 
+  //Filtered data where class of alcohol is 3 and calculated gamma in map and returned gamma values for all
   const class3 = wineData
     .filter((el) => el.Alcohol === 3)
     .map((el) => {

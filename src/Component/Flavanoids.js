@@ -10,14 +10,17 @@ const Flavanoids = (data) => {
       mode: findMode(data),
     };
   };
+  //Filtered data where class of alcohol is 1 and got different array of flavanoids
   const alcoholOne = wineData
     .filter((el) => el.Alcohol === 1)
     .map((elm) => elm.Flavanoids);
 
+  //Filtered data where class of alcohol is 2 and got different array of flavanoids
   const alcoholTwo = wineData
     .filter((el) => el.Alcohol === 2)
     .map((elm) => elm.Flavanoids);
 
+  //Filtered data where class of alcohol is 3 and got different array of flavanoids
   const alcoholThree = wineData
     .filter((el) => el.Alcohol === 3)
     .map((elm) => {
@@ -30,7 +33,7 @@ const Flavanoids = (data) => {
   const dataClass3 = calculateData(alcoholThree);
 
   return (
-    <div >
+    <div>
       <h4>Mean, Median and Mode for flavanoids</h4>
       <table>
         <thead>

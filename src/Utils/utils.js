@@ -1,3 +1,4 @@
+//function for calculating mean
 export const findMean = (flav) => {
   let sum = 0;
   for (let i = 0; i < flav.length; i++) {
@@ -7,6 +8,7 @@ export const findMean = (flav) => {
   return result.toFixed(3);
 };
 
+//function for calculating median
 export const findMedian = (flav) => {
   //5,3,6,8,9,5,8,
   flav.sort((a, b) => a - b);
@@ -20,6 +22,7 @@ export const findMedian = (flav) => {
   }
 };
 
+//function for calculating mode
 export const findMode = (flav) => {
   const flavonoidObj = {};
   flav.forEach((num) => {
