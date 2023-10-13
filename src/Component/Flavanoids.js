@@ -13,12 +13,16 @@ const Flavanoids = (data) => {
   //Filtered data where class of alcohol is 1 and got different array of flavanoids
   const alcoholOne = wineData
     .filter((el) => el.Alcohol === 1)
-    .map((elm) => elm.Flavanoids);
+    .map((elm) => {
+      return elm.Flavanoids;
+    });
 
   //Filtered data where class of alcohol is 2 and got different array of flavanoids
   const alcoholTwo = wineData
     .filter((el) => el.Alcohol === 2)
-    .map((elm) => elm.Flavanoids);
+    .map((elm) => {
+      return elm.Flavanoids;
+    });
 
   //Filtered data where class of alcohol is 3 and got different array of flavanoids
   const alcoholThree = wineData

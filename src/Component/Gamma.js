@@ -18,7 +18,8 @@ const Gamma = (data) => {
     .filter((el) => el.Alcohol === 1)
     .map((el) => {
       let gamma = (el.Ash * el.Hue) / el.Magnesium;
-      return gamma;
+
+      return Math.round(gamma * 100) / 1000;
     });
 
   //Filtered data where class of alcohol is 2 and calculated gamma in map and returned gamma values for all
@@ -26,7 +27,7 @@ const Gamma = (data) => {
     .filter((el) => el.Alcohol === 2)
     .map((el) => {
       let gamma = (el.Ash * el.Hue) / el.Magnesium;
-      return gamma;
+      return Math.round(gamma * 100) / 1000;
     });
 
   //Filtered data where class of alcohol is 3 and calculated gamma in map and returned gamma values for all
@@ -34,7 +35,8 @@ const Gamma = (data) => {
     .filter((el) => el.Alcohol === 3)
     .map((el) => {
       let gamma = (el.Ash * el.Hue) / el.Magnesium;
-      return gamma;
+
+      return Math.round(gamma * 100) / 1000;
     });
 
   const dataClass1 = calculateData(class1);
